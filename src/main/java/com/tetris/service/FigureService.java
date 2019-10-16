@@ -5,6 +5,7 @@ import com.tetris.factory.FigureFactory;
 import com.tetris.factory.impl.IFigureFactory;
 import com.tetris.factory.impl.LFigureFactory;
 import com.tetris.factory.impl.OFigureFactory;
+import com.tetris.factory.impl.OSuperFigureFactory;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -22,7 +23,7 @@ public class FigureService {
 
     private List<Figure> getRandomFigures() {
         List<Figure> figures = new ArrayList<>();
-        factories = Arrays.asList(new IFigureFactory(), new LFigureFactory(), new OFigureFactory());
+        factories = Arrays.asList(new IFigureFactory(), new LFigureFactory(), new OFigureFactory(), new OSuperFigureFactory());
         random = new Random();
         FigureFactory creatorFigure = getRandomCreatorFigure();
         for (int i = 0; i < 15; ++i) {
